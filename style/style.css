@@ -1,0 +1,70 @@
+        html,
+        body {
+            height: 100%;
+            /* Pastikan body mengambil seluruh tinggi layar */
+            margin: 0;
+            /* Hilangkan margin default */
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url('https://wallpaperaccess.com/full/3163822.jpg');
+            /* Ganti dengan URL gambar latar belakang Anda */
+            background-size: cover;
+            /* Menyesuaikan gambar dengan ukuran layar */
+            background-attachment: fixed;
+            /* Gambar tetap saat scroll */
+            background-position: center;
+            /* Posisikan gambar di tengah */
+            background-repeat: no-repeat;
+            /* Pastikan gambar tidak berulang */
+        }
+
+        .text-stroke1 {
+            -webkit-text-stroke: 0.50px black;
+            /* Mengatur lebar stroke */
+            color: white;
+            /* Mengatur warna teks */
+        }
+
+        .bg-lap {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            min-width: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.5;
+            border: none;
+            cursor: pointer;
+        }
+
+        .carousel-indicators button.active {
+            opacity: 1;
+        }
