@@ -16,37 +16,37 @@
 
 <body>
     <section>
-    <!-- Navbar -->
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow-md z-50">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <!-- Logo + Judul -->
-            <div class="flex items-center space-x-3">
-                <a href="#" class="flex items-center">
-                    <img src="../logo/Logo.png" alt="Logo" class="h-14 w-15 rounded-full">
-                </a>
-                <div class="text-2xl font-bold">
-                    <span class="text-green-500">RS DKT</span> Gubeng Pojok
+        <!-- Navbar -->
+        <header id="navbar" class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow-md z-50">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                <!-- Logo + Judul -->
+                <div class="flex items-center space-x-3">
+                    <a href="#" class="flex items-center">
+                        <img src="../logo/Logo.png" alt="Logo" class="h-14 w-15 rounded-full">
+                    </a>
+                    <div class="text-2xl font-bold">
+                        <span class="text-green-500">RS DKT</span> Gubeng Pojok
+                    </div>
                 </div>
+
+                <!-- Hamburger Button (Mobile Only) -->
+                <button id="menuToggle" class="md:hidden focus:outline-none text-white text-2xl">
+                    ☰
+                </button>
+
+                <!-- Menu Navigasi (Desktop) -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400">Beranda</a>
+                </nav>
             </div>
 
-            <!-- Hamburger Button (Mobile Only) -->
-            <button id="menuToggle" class="md:hidden focus:outline-none text-white text-2xl">
-                ☰
-            </button>
-
-            <!-- Menu Navigasi (Desktop) -->
-            <nav class="hidden md:flex space-x-6">
+            <!-- Menu Mobile -->
+            <div id="mobileMenu"
+                class="transition-all duration-300 ease-in-out md:hidden hidden flex flex-col items-start px-6 pb-4 space-y-2 bg-blue-600 text-white">
                 <a href="../index.html" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400">Beranda</a>
-            </nav>
-        </div>
+            </div>
 
-        <!-- Menu Mobile -->
-        <div id="mobileMenu"
-            class="transition-all duration-300 ease-in-out md:hidden hidden flex flex-col items-start px-6 pb-4 space-y-2 bg-blue-600 text-white">
-            <a href="../index.html" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400">Beranda</a>
-        </div>
-
-    </header>
+        </header>
 
         <main class="pt-40 px-6 pb-16 bg-gray-50 min-h-screen">
             <section
@@ -65,7 +65,9 @@
                         <h2 class="text-2xl font-semibold text-green-600 mb-2">Visi</h2>
                         <p class="text-gray-700 leading-relaxed">
                             Menjadi rumah sakit pilihan utama masyarakat dalam pelayanan kesehatan yang profesional,
-                            humanis, dan terjangkau. Cuma creatornya gk punya Visi karena buat gini gk di gaji, udah gitu dulu sempat di suruh buat website minta web profil ada tombol Registrasi Online. Minta kelar dalam waktu 3 Bulan, kek di bayar aja gua jirr di suruh buat ginian :V
+                            humanis, dan terjangkau. Cuma creatornya gk punya Visi karena buat gini gk di gaji, udah
+                            gitu dulu sempat di suruh buat website minta web profil ada tombol Registrasi Online. Minta
+                            kelar dalam waktu 3 Bulan, kek di bayar aja gua jirr di suruh buat ginian :V
                         </p>
                     </div>
 
@@ -86,10 +88,17 @@
                         <h2 class="text-2xl font-semibold text-green-600 mb-2">Tambahan</h2>
                         <ul class="list-disc pl-6 text-gray-700 space-y-2">
                             <li>Ambativasi tanpa aksi hanyalah Air Muwani</li>
-                            <li>Minimal kalo nyuruh IT gk usah aneh-aneh, sudah ada grup Evaluasi E-RM itu di manfaatkan</li>
+                            <li>Minimal kalo nyuruh IT gk usah aneh-aneh, sudah ada grup Evaluasi E-RM itu di manfaatkan
+                            </li>
                             <li>Kan ada IT 3 nih kenapa kalian selalu ngerusuh gua Anjing</li>
-                            <li>Kalau ada kendala gk usah alasan gk bisa kerja, kendalanya selesai aja lu kagak kerja :V</li>
-                            <li>Tidak usah iri sama IT, gua suruh jadi IT kagak mau. Gua di sini juga di gaji telat Anjing, sama-sama di gaji 1,3 Juta aja nyocot mulu Cok</li>
+                            <li>Kalau ada kendala gk usah alasan gk bisa kerja, kendalanya selesai aja lu kagak kerja :V
+                            </li>
+                            <li>Tidak usah iri sama IT, gua suruh jadi IT kagak mau. Gua di sini juga di gaji telat
+                                Anjing, sama-sama di gaji 1,3 Juta aja nyocot mulu Cok</li>
+                            <li>Lulusan SMK tetapi Impact yang di berikan seperti Network Planner / System Analyst, IT
+                                Asset, IT Helpdesk / Project Coordinator, Network Engineer, IT Support / Hardware
+                                Technician, Network Administrator. Jangan buta fakta, kau tidak akan bisa mendapatkan IT
+                                lulusan SMK yang di bayar murah untuk melakukan semua itu. "Camkan Itu"</li>
                         </ul>
                     </div>
                 </div>
@@ -154,14 +163,14 @@
             Your browser does not support the audio element.
         </audio>
 
-            <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
+        <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
 </body>
 
 </html>
