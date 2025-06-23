@@ -80,17 +80,17 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', () => {
             const currentPage = window.location.pathname;
 
-            if (currentPage.includes("index-dev.html")) {
+            if (currentPage.includes("index-dark.html")) {
                 window.location.href = "index.html";
             } else {
-                window.location.href = "index-dev.html";
+                window.location.href = "index-dark.html";
             }
         });
     });
 
     // === Set Ikon Toggle (Hanya Untuk Tampilan Awal) ===
     const currentPath = window.location.pathname;
-    const currentMode = currentPath.includes("index-dev.html") ? "personal" : "resmi";
+    const currentMode = currentPath.includes("index-dark.html") ? "personal" : "resmi";
 
     modeToggles.forEach(toggleBtn => {
         const icon = toggleBtn.querySelector('i');
