@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const email = document.getElementById("email").value.trim();
             const message = document.getElementById("message").value.trim();
 
-            const phone = "6285797227908"; // Ganti sesuai kebutuhan
-            const text = `Saya ingin bertanya,%0A%0A*Nama:* ${name}%0A*Email:* ${email}%0A*Question:* ${message}`;
+            const phone = "6283833025236"; // Ganti sesuai kebutuhan
+            const text = `Bang saya mawu tanya,%0A%0A*Nama:* ${name}%0A*Email:* ${email}%0A*Pesan:* ${message}`;
             const url = `https://wa.me/${phone}?text=${text}`;
 
             window.open(url, "_blank");

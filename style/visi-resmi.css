@@ -1,0 +1,28 @@
+        main {
+            background-image: url('http://192.168.11.136/uploads/logo-09112023162437-WhiDiU9h1q.jpeg');
+            /* Ganti dengan URL gambar latar belakang Anda */
+            background-size: cover;
+            /* Menyesuaikan gambar dengan ukuran layar */
+            background-attachment: fixed;
+            /* Gambar tetap saat scroll */
+            background-position: center;
+            /* Posisikan gambar di tengah */
+            background-repeat: no-repeat;
+            /* Pastikan gambar tidak berulang */
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
