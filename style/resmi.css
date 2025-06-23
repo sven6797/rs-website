@@ -8,7 +8,7 @@
         }
 
         body {
-            background-image: url('http://192.168.11.136/uploads/logo-09112023162437-WhiDiU9h1q.jpeg');
+            background-image: url('../img/background.jpeg');
             /* Ganti dengan URL gambar latar belakang Anda */
             background-size: cover;
             /* Menyesuaikan gambar dengan ukuran layar */
