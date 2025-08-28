@@ -1,269 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospital</title>
-    <link rel="icon" href="./logo/favicon.png" type="image/png" sizes="512x512">
+    <link
+      rel="icon"
+      href="./logo/favicon.png"
+      type="image/png"
+      sizes="512x512"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style/resmi.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/resmi.css" />
     <script src="js/main.js"></script>
-</head>
+  </head>
 
-<body class="bg-gray-50 text-gray-800" data-mode="personal">
+  <body class="bg-gray-50 text-gray-800" data-mode="personal">
     <!-- Navbar -->
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow-md z-50">
-        <div class="w-full max-w-[1280px] mx-auto flex justify-between items-center py-4 px-6">
-            <!-- Logo + Judul -->
-            <div class="flex items-center space-x-3">
-                <a href="#" class="flex items-center">
-                    <img src="./logo/Logo.png" alt="Logo" class="h-14 w-15 rounded-full">
-                </a>
-                <div class="text-2xl font-bold">
-                    <span class="text-green-500">RS DKT</span> Gubeng Pojok
-                </div>
-            </div>
-
-            <!-- Hamburger Button (Mobile Only) -->
-            <button id="menuToggle" class="md:hidden focus:outline-none text-white text-2xl">
-                ☰
-            </button>
-
-            <!-- Menu Navigasi (Desktop) -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="#services" class="hover:text-blue-200">Services</a>
-                <a href="#about" class="hover:text-blue-200">About Us</a>
-                <a href="#contact" class="hover:text-blue-200">Contact</a>
-                <a href="#location" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400">Location</a>
-            </nav>
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow-md z-50"
+    >
+      <div
+        class="w-full max-w-[1280px] mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <!-- Logo + Judul -->
+        <div class="flex items-center space-x-3">
+          <a href="#" class="flex items-center">
+            <img
+              src="./logo/Logo.png"
+              alt="Logo"
+              class="h-14 w-15 rounded-full"
+            />
+          </a>
+          <div class="text-2xl font-bold">
+            <span class="text-green-500">RS DKT</span> Gubeng Pojok
+          </div>
         </div>
 
-        <!-- Menu Mobile -->
-        <div id="mobileMenu"
-            class="transition-all duration-300 ease-in-out md:hidden hidden flex flex-col items-start px-6 pb-4 space-y-2 bg-blue-600 text-white">
-            <a href="#services" class="hover:text-blue-200">Services</a>
-            <a href="#about" class="hover:text-blue-200">About Us</a>
-            <a href="#contact" class="hover:text-blue-200">Contact</a>
-            <a href="#location" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400">Location</a>
-        </div>
+        <!-- Hamburger Button (Mobile Only) -->
+        <button
+          id="menuToggle"
+          class="md:hidden focus:outline-none text-white text-2xl"
+        >
+          ☰
+        </button>
 
+        <!-- Menu Navigasi (Desktop) -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="#services" class="hover:text-blue-200">Services</a>
+          <a href="#about" class="hover:text-blue-200">About Us</a>
+          <a href="#contact" class="hover:text-blue-200">Contact</a>
+          <a
+            href="#location"
+            class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400"
+            >Location</a
+          >
+        </nav>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div
+        id="mobileMenu"
+        class="transition-all duration-300 ease-in-out md:hidden hidden flex flex-col items-start px-6 pb-4 space-y-2 bg-blue-600 text-white"
+      >
+        <a href="#services" class="hover:text-blue-200">Services</a>
+        <a href="#about" class="hover:text-blue-200">About Us</a>
+        <a href="#contact" class="hover:text-blue-200">Contact</a>
+        <a
+          href="#location"
+          class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-400"
+          >Location</a
+        >
+      </div>
     </header>
 
-
-    <section class="pt-20 text-white bg-lap bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg">
-        <div class="container mx-auto flex flex-col md:flex-row items-center py-20 px-6 bg-cover gap-10">
-
-            <!-- Gambar (di atas di HP, kanan di desktop) -->
-            <div class="md:w-1/2 order-1 md:order-2">
-                <div class="carousel" id="hero-carousel">
-                    <div class="carousel-images">
-                        <img src="./img/background.jpeg" alt="Healthcare 1" class="rounded-lg">
-                        <img src="./img/denji.jpg" alt="Healthcare 2" class="rounded-lg">
-                        <img src="./img/background.jpeg" alt="Healthcare 3">
-                    </div>
-                    <div class="carousel-indicators">
-                        <button data-slide="0" class="active"></button>
-                        <button data-slide="1"></button>
-                        <button data-slide="2"></button>
-                    </div>
-                </div>
+    <section
+      class="pt-20 text-white bg-lap bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center py-20 px-6 bg-cover gap-10"
+      >
+        <!-- Gambar (di atas di HP, kanan di desktop) -->
+        <div class="md:w-1/2 order-1 md:order-2">
+          <div class="carousel" id="hero-carousel">
+            <div class="carousel-images">
+              <img
+                src="./img/background.jpeg"
+                alt="Healthcare 1"
+                class="rounded-lg"
+              />
+              <img
+                src="./img/denji.jpg"
+                alt="Healthcare 2"
+                class="rounded-lg"
+              />
+              <img src="./img/background.jpeg" alt="Healthcare 3" />
             </div>
-
-            <!-- Teks (di bawah di HP, kiri di desktop) versi personal -->
-            <div class="md:w-1/2 order-2 md:order-1">
-                <h1 class="text-4xl font-bold mb-4 text-stroke1">Melayani pasien dengan penuh perhatian dan adil</h1>
-                <p class="text-lg mb-6 max-w-lg">Melayani dengan tulus dan senyuman</p>
+            <div class="carousel-indicators">
+              <button data-slide="0" class="active"></button>
+              <button data-slide="1"></button>
+              <button data-slide="2"></button>
             </div>
+          </div>
         </div>
 
-        <div class="w-full max-w-[1280px] mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8"></h2>
-            <div class="grid md:grid-cols-3 gap-8 text-blue-500">
-                <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile&hl=id" target="_blank"
-                    rel="noopener noreferrer" class="block bg-white p-6 shadow-md rounded-lg hover:bg-green-200">
-                    <i class="fa-solid fa-user-plus text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Online Registration</h3>
-                    <p>Register online and save time at the hospital.</p>
-                </a>
-                <button id="doctor-schedule" target="_blank" rel="noopener noreferrer"
-                    class="block bg-white p-6 shadow-md rounded-lg hover:bg-gray-200">
-                    <i class="fa-solid fa-calendar-check text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Doctor Schedule</h3>
-                    <p>View our doctors' availability and schedules.</p>
-                </button>
-                <a href="offline-registration.html" target="_blank" rel="noopener noreferrer"
-                    class="block bg-white p-6 shadow-md rounded-lg hover:bg-gray-200">
-                    <i class="fa-solid fa-building text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-4">Offline Registration</h3>
-                    <p>Visit our hospital to register in person.</p>
-                </a>
-            </div>
+        <!-- Teks (di bawah di HP, kiri di desktop) versi personal -->
+        <div class="md:w-1/2 order-2 md:order-1">
+          <h1 class="text-4xl font-bold mb-4 text-stroke1">
+            Melayani pasien dengan penuh perhatian dan adil
+          </h1>
+          <p class="text-lg mb-6 max-w-lg">
+            Melayani dengan tulus dan senyuman
+          </p>
         </div>
+      </div>
+
+      <div class="w-full max-w-[1280px] mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8"></h2>
+        <div class="grid md:grid-cols-3 gap-8 text-blue-500">
+          <a
+            href="https://play.google.com/store/apps/details?id=app.bpjs.mobile&hl=id"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-white p-6 shadow-md rounded-lg hover:bg-green-200"
+          >
+            <i class="fa-solid fa-user-plus text-blue-500 text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-4">Online Registration</h3>
+            <p>Register online and save time at the hospital.</p>
+          </a>
+          <button
+            id="doctor-schedule"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-white p-6 shadow-md rounded-lg hover:bg-gray-200"
+          >
+            <i
+              class="fa-solid fa-calendar-check text-blue-500 text-3xl mb-4"
+            ></i>
+            <h3 class="text-xl font-semibold mb-4">Doctor Schedule</h3>
+            <p>View our doctors' availability and schedules.</p>
+          </button>
+          <a
+            href="https://rsdkt-gubeng-online.medify.id/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-white p-6 shadow-md rounded-lg hover:bg-gray-200"
+          >
+            <i class="fa-solid fa-building text-blue-500 text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-4">Offline Registration</h3>
+            <p>Visit our hospital to register in person.</p>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Quick Access Section -->
-    <section id="quick-access" class="py-16 bg-gray-700 bg-opacity-60 p-8">
-
-    </section>
+    <section
+      id="quick-access"
+      class="py-16 bg-gray-700 bg-opacity-60 p-8"
+    ></section>
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-100 scroll-mt-20">
-        <div class="w-full max-w-[1280px] mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Layanan Kami</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 shadow-md rounded-lg">
-                    <img src="./img/background.jpeg" alt="Emergency Care" class="w-full rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Emergency Care</h3>
-                    <p>Kami melayani pasien emergency 24 Jam</p>
-                </div>
-                <div class="bg-white p-6 shadow-md rounded-lg">
-                    <img src="./img/background.jpeg"
-                        alt="Specialized Clinics" class="w-full rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Poliklinik</h3>
-                    <p>Kami memiliki Poliklinik Anak, Obgyn / Kandungan, Bedah, dan Penyakit Dalam</p>
-                </div>
-                <div class="bg-white p-6 shadow-md rounded-lg">
-                    <img src="./img/background.jpeg" alt="Diagnostic Services" class="w-full rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Diagnostic Services</h3>
-                    <p>Advanced imaging and lab tests for accurate diagnosis.</p>
-                </div>
-            </div>
+      <div class="w-full max-w-[1280px] mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Layanan Kami</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 shadow-md rounded-lg">
+            <img
+              src="./img/background.jpeg"
+              alt="Emergency Care"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Emergency Care</h3>
+            <p>Kami melayani pasien emergency 24 Jam</p>
+          </div>
+          <div class="bg-white p-6 shadow-md rounded-lg">
+            <img
+              src="./img/background.jpeg"
+              alt="Specialized Clinics"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Poliklinik</h3>
+            <p>
+              Kami memiliki Poliklinik Anak, Obgyn / Kandungan, Bedah, dan
+              Penyakit Dalam
+            </p>
+          </div>
+          <div class="bg-white p-6 shadow-md rounded-lg">
+            <img
+              src="./img/background.jpeg"
+              alt="Diagnostic Services"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Diagnostic Services</h3>
+            <p>Advanced imaging and lab tests for accurate diagnosis.</p>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-white scroll-mt-20">
-        <div class="w-full max-w-[1280px] mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="./img/background.jpeg" alt="About Us" class="rounded-lg shadow-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-12">
-                    <h2 class="text-3xl font-bold mb-4">Tentang Rumah Sakit</h2>
-                    <p class="mb-6">Rumah Sakit Ibu dan Anak Bantuan 05.08.05 Surabaya (3578773) atau dapat disebut juga RSIA DKT...</p>
-                    <a href="./daftar isi/visi.html"
-                        class="bg-blue-500 text-white px-6 py-3 rounded font-semibold hover:bg-blue-400">Baca Selengkapnya</a>
-                </div>
-            </div>
+      <div class="w-full max-w-[1280px] mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <img
+              src="./img/background.jpeg"
+              alt="About Us"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-3xl font-bold mb-4">Tentang Rumah Sakit</h2>
+            <p class="mb-6">
+              Rumah Sakit Ibu dan Anak Bantuan 05.08.05 Surabaya (3578773) atau
+              dapat disebut juga RSIA DKT...
+            </p>
+            <a
+              href="./daftar isi/visi.html"
+              class="bg-blue-500 text-white px-6 py-3 rounded font-semibold hover:bg-blue-400"
+              >Baca Selengkapnya</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Location -->
     <section id="location" class="py-16 bg-white scroll-mt-20">
-        <div class="w-full max-w-[1280px] mx-auto px-6">
-            <h3 class="text-2xl font-bold mb-6 text-center">Location</h3>
-            <div class="w-full h-[350px] rounded overflow-hidden shadow-lg">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15831.036295448273!2d112.751678!3d-7.268235000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f97d3621291b%3A0x2522254fa10056d5!2sJl.%20Gubeng%20Pojok%20No.21%2C%20Ketabang%2C%20Kec.%20Genteng%2C%20Surabaya%2C%20Jawa%20Timur%2060272%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1750123613137!5m2!1sen!2sus"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+      <div class="w-full max-w-[1280px] mx-auto px-6">
+        <h3 class="text-2xl font-bold mb-6 text-center">Location</h3>
+        <div class="w-full h-[350px] rounded overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15831.036295448273!2d112.751678!3d-7.268235000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f97d3621291b%3A0x2522254fa10056d5!2sJl.%20Gubeng%20Pojok%20No.21%2C%20Ketabang%2C%20Kec.%20Genteng%2C%20Surabaya%2C%20Jawa%20Timur%2060272%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1750123613137!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-100 scroll-mt-20">
-        <div class="w-full max-w-[1280px] mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-            <p class="mb-6">For appointments and inquiries, reach us at:</p>
-            <p class="font-semibold">Phone: (031) 5464215</p>
-            <p class="font-semibold">Email: rumkitbansurabaya@gmail.com</p>
+      <div class="w-full max-w-[1280px] mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+        <p class="mb-6">For appointments and inquiries, reach us at:</p>
+        <p class="font-semibold">Phone: (031) 5464215</p>
+        <p class="font-semibold">Email: rumkitbansurabaya@gmail.com</p>
 
-            <form id="contact-form" class="mt-8">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="name" placeholder="Your Name" class="w-full px-4 py-2 border rounded"
-                        required>
-                    <input type="email" id="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded"
-                        required>
-                </div>
-                <textarea id="message" placeholder="Your Message" class="w-full mt-6 px-4 py-2 border rounded h-32"
-                    required></textarea>
-                <button type="submit"
-                    class="bg-blue-500 text-white px-6 py-3 rounded mt-4 hover:bg-blue-400 transition">
-                    Send Message
-                </button>
-            </form>
-        </div>
+        <form id="contact-form" class="mt-8">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              class="w-full px-4 py-2 border rounded"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email"
+              class="w-full px-4 py-2 border rounded"
+              required
+            />
+          </div>
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            class="w-full mt-6 px-4 py-2 border rounded h-32"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-6 py-3 rounded mt-4 hover:bg-blue-400 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer id="footer" class="bg-blue-600 text-white pt-10 pb-6">
-        <div class="w-full max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-            <!-- About -->
-            <div>
-                <h3 class="text-xl font-bold mb-4">RS DKT Gubeng Pojok</h3>
-                <p class="text-sm text-blue-100">
-                    Tidak peduli isinya, lagian gua tidak di gaji buat gini
-                </p>
-            </div>
-
-            <!-- Quick Links -->
-            <div>
-                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-sm text-blue-100">
-                    <li><a href="#services" class="hover:underline hover:text-white transition">Services</a></li>
-                    <li><a href="#about" class="hover:underline hover:text-white transition">About Us</a></li>
-                    <li><a href="#contact" class="hover:underline hover:text-white transition">Contact</a></li>
-                    <li><a href="#location" class="hover:underline hover:text-white transition">Location</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Contact & Social -->
-            <div>
-                <h3 class="text-xl font-bold mb-4">Contact</h3>
-                <p class="text-sm text-blue-100">Jl. Gubeng Pojok No. 21, Surabaya</p>
-                <p class="text-sm text-blue-100">Phone: (031) 5464215</p>
-                <p class="text-sm text-blue-100 mb-4">rumkitbansurabaya@gmail.com</p>
-
-                <div class="flex justify-center md:justify-start gap-4 text-white text-xl">
-                    <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
+      <div
+        class="w-full max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left"
+      >
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">RS DKT Gubeng Pojok</h3>
+          <p class="text-sm text-blue-100">
+            Tidak peduli isinya, lagian gua tidak di gaji buat gini
+          </p>
         </div>
 
-        <!-- Copyright -->
-        <div class="text-center mt-10 text-sm text-blue-100 border-t border-blue-500 pt-4">
-            &copy; 2025 Cold7ven. All rights reserved.
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm text-blue-100">
+            <li>
+              <a
+                href="#services"
+                class="hover:underline hover:text-white transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:underline hover:text-white transition"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:underline hover:text-white transition"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="#location"
+                class="hover:underline hover:text-white transition"
+                >Location</a
+              >
+            </li>
+          </ul>
         </div>
+
+        <!-- Contact & Social -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact</h3>
+          <p class="text-sm text-blue-100">Jl. Gubeng Pojok No. 21, Surabaya</p>
+          <p class="text-sm text-blue-100">Phone: (031) 5464215</p>
+          <p class="text-sm text-blue-100 mb-4">rumkitbansurabaya@gmail.com</p>
+
+          <div
+            class="flex justify-center md:justify-start gap-4 text-white text-xl"
+          >
+            <a href="#" class="hover:text-blue-300 transition"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-blue-300 transition"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-300 transition"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="text-center mt-10 text-sm text-blue-100 border-t border-blue-500 pt-4"
+      >
+        &copy; 2025 Cold7ven. All rights reserved.
+      </div>
     </footer>
 
     <!-- Audio Player -->
     <div
-        class="fixed bottom-4 right-4 bg-white bg-opacity-80 rounded-lg shadow-lg p-2 flex items-center space-x-2 z-50">
-        <button id="audio-toggle" class="text-blue-600 hover:text-blue-800">
-            <i class="fas fa-play"></i>
-        </button>
-        <span class="text-sm font-semibold">Music</span>
-        <audio id="bg-music" loop>
-            <source src="./data/music/MY FIRST STORY - メリーゴーランド - Official Music Video.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+      class="fixed bottom-4 right-4 bg-white bg-opacity-80 rounded-lg shadow-lg p-2 flex items-center space-x-2 z-50"
+    >
+      <button id="audio-toggle" class="text-blue-600 hover:text-blue-800">
+        <i class="fas fa-play"></i>
+      </button>
+      <span class="text-sm font-semibold">Music</span>
+      <audio id="bg-music" loop>
+        <source
+          src="./data/music/MY FIRST STORY - メリーゴーランド - Official Music Video.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
     </div>
 
-    <div class="fixed bottom-4 left-4 bg-white bg-opacity-80 rounded-lg shadow-lg p-2 flex items-center space-x-2 z-50">
+    <!-- <div class="fixed bottom-4 left-4 bg-white bg-opacity-80 rounded-lg shadow-lg p-2 flex items-center space-x-2 z-50">
         <button id="modeToggle" class="text-blue-600 hover:text-blue-800">
             <i class="fas fa-adjust"></i>
             <span class="text-sm font-semibold">Mode</span>
         </button>
-    </div>
+    </div> -->
 
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
